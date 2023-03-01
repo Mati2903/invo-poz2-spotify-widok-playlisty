@@ -1,0 +1,402 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+///
+
+#home-page {
+	color: #fff;
+	max-width: 1440px; //max width for ultrawide screens
+	margin: 0 auto; //centering
+	.navigation-bar {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		left: 0;
+		height: 84px;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 99;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		&__arrows {
+			svg {
+				margin-left: 1rem;
+				cursor: not-allowed;
+				transition: scale 0.15s;
+				&:hover {
+					scale: 1.2;
+				}
+				&:active {
+					scale: 1.1;
+				}
+				&:nth-child(2) {
+					display: none;
+				}
+			}
+		}
+		//user profile on the right (only on desktops)
+		&__user {
+			position: absolute;
+			right: 50px;
+			display: none; //display: flex only on desktops
+			align-items: center;
+			gap: 12px;
+			width: 177px;
+			height: 44px;
+			background-color: rgba(0, 0, 0, 0.7);
+			border-radius: 22px; //half of height
+			font-family: "Lato";
+			cursor: pointer;
+			img {
+				border-radius: 50%;
+				height: 38px;
+				margin-left: 3px;
+			}
+			p {
+				font-size: 16px;
+				font-weight: bold;
+			}
+
+			&__on-hover-banner {
+				display: none;
+				position: absolute;
+				top: 120%;
+				right: 0;
+				padding: 10px 16px;
+				font-size: 16px;
+				font-weight: 500;
+				border-radius: 8px;
+				background-color: rgba(0, 0, 0, 0.7);
+			}
+			&:hover {
+				.navigation-bar__user__on-hover-banner {
+					display: block;
+				}
+			}
+		}
+	}
+	//----------- header container with image and text--------------
+	.header {
+		height: 434px;
+		position: relative;
+		margin-top: -84px; //the height of navbar
+		overflow: hidden;
+		&__img {
+			height: 100%;
+			img {
+				position: absolute;
+				right: -25%;
+				width: auto;
+				height: 100%;
+			}
+		}
+		&__text-container {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 2rem;
+			font-family: "Lato", sans-serif;
+			span {
+				font-size: 16px;
+				font-weight: 400;
+			}
+			h1 {
+				font-size: 48px;
+				font-weight: 700;
+				letter-spacing: -4%;
+				padding: 1rem 0;
+			}
+			p {
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: -4%;
+				color: #bfbfbf;
+			}
+		}
+	}
+	//-----------play, like and 3 dots element-------------
+	.user-controls {
+		padding: 1.5rem 1rem;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		&__heart.active {
+			path {
+				fill: red;
+			}
+		}
+		svg {
+			transition: scale 0.15s;
+			cursor: pointer;
+			&:hover {
+				scale: 1.2;
+			}
+			&:active {
+				scale: 1.1;
+			}
+		}
+	}
+	//-----------playlist --------------------
+	.playlist {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0 1rem 1rem;
+		gap: 1rem;
+		// ------------ each card component---------------
+		&__card {
+			height: 89px;
+			width: 100%;
+			border-radius: 17px;
+			background-color: #18181c;
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			position: relative; //to position elements inside
+			cursor: pointer;
+			transition: background-color 0.3s linear;
+			&:hover {
+				background-color: #292929;
+			}
+			&.active {
+				background-color: #444444;
+			}
+			&-number {
+				margin: 0 1.5rem;
+				svg {
+					display: none;
+				}
+				span {
+					display: block;
+					width: 18px; //same as play icon
+				}
+				//active class is from JS
+				&.active {
+					svg {
+						display: block;
+						&:hover {
+							scale: 1.2;
+						}
+						&:active {
+							scale: 1.1;
+						}
+					}
+					span {
+						display: none;
+					}
+				}
+			}
+			//----------- container with album image ---------------
+			&__info-container {
+				height: 56px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 1.5rem;
+				img {
+					width: 56px;
+					height: 56px;
+					border-radius: 8px;
+				}
+				//--------------playlist -------------------
+				.playlist__card__song-info {
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					gap: 0.5rem;
+					&__album {
+						font-size: 12px;
+						color: #bfbfbf;
+					}
+					&__title {
+						font-size: 16px;
+						font-weight: 500;
+					}
+				}
+			}
+			//-------- artist info (tablet/desktop only)--------------
+			&__artist-info {
+				display: none;
+				position: absolute;
+				left: 50%;
+
+				&__artists {
+					font-size: 12px;
+					color: #bfbfbf;
+				}
+				&__name {
+					font-size: 16px;
+					font-weight: 500;
+				}
+			}
+			//-------- song duration (only desktops)---------
+			&__song-duration {
+				display: none;
+				position: absolute;
+				left: 70%;
+				&__time {
+					color: #bfbfbf;
+				}
+			}
+			//----------- icons on the right side of card ------------------
+			&__buttons {
+				position: absolute;
+				right: 24px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 18px;
+				&__heart.active {
+					path {
+						fill: red;
+					}
+				}
+				svg {
+					transition: scale 0.15s;
+					cursor: pointer;
+					&:hover {
+						scale: 1.2;
+					}
+					&:active {
+						scale: 1.1;
+					}
+				}
+				svg:nth-child(1) {
+					//heart
+					opacity: 0;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+	//---------- bottom menu -----------------
+	.bottom-menu {
+		position: sticky;
+		bottom: 0;
+		height: 82px;
+		width: 100%;
+		background-color: #000;
+		border-top: 1px solid #292929;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		&__button {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			color: #bfbfbf;
+			cursor: pointer;
+			svg {
+				pointer-events: none; //for click targeting all div, not only svg or text
+			}
+			p {
+				pointer-events: none;
+				font-size: 12px;
+				font-weight: 400;
+				font-family: "Lato";
+			}
+			&:hover {
+				color: #fff;
+				svg {
+					path {
+						fill: #fff;
+					}
+				}
+			}
+			&.active {
+				p {
+					font-weight: 700;
+				}
+				color: #fff;
+				svg {
+					path {
+						fill: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+//=================================== TABLET =================================
+@media screen and (min-width: 768px) {
+	#home-page {
+		.header {
+			&__img {
+				img {
+					right: -15%;
+				}
+			}
+		}
+		.playlist {
+			&__card {
+				&__artist-info {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					gap: 0.5rem;
+				}
+			}
+		}
+	}
+}
+//======================== DESKTOP ================================
+@media screen and (min-width: 1025px) {
+	#home-page {
+		.navigation-bar {
+			&__arrows {
+				svg {
+					&:nth-child(2) {
+						display: inline;
+					}
+				}
+			}
+			&__user {
+				display: flex;
+			}
+		}
+		.header {
+			&__img {
+				img {
+					left: 0;
+					min-width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		.playlist {
+			&__card {
+				&__artist-info {
+					left: 40%;
+				}
+				&__song-duration {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					gap: 0.5rem;
+					&__time {
+						font-size: 12px;
+					}
+					&__minutes {
+						font-size: 16px;
+						font-weight: 500;
+					}
+				}
+				&__buttons {
+					right: 50px;
+
+					svg:nth-child(1) {
+						pointer-events: all;
+						cursor: pointer;
+						//heart
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

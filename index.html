@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>INVO Academy JS Starter with Vite</title>
+	</head>
+
+	<!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
+
+	<body>
+		<div id="home-page">
+			<nav class="navigation-bar">
+        <div class="navigation-bar__arrows">
+          <!-- arrow left -->
+          <svg
+					width="46"
+					height="46"
+					viewBox="0 0 46 46"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<rect
+						x="46"
+						y="46"
+						width="46"
+						height="46"
+						rx="23"
+						transform="rotate(180 46 46)"
+						fill="black"
+						fill-opacity="0.5"
+					/>
+					<g clip-path="url(#clip0_1_2748)">
+						<path
+							d="M17.9997 23.7024L26.01 31.7124C26.1952 31.8979 26.4425 32 26.7062 32C26.9699 32 27.2173 31.8979 27.4025 31.7124L27.9924 31.1227C28.3763 30.7384 28.3763 30.1138 27.9924 29.7301L21.266 23.0037L27.9999 16.2699C28.1852 16.0845 28.2874 15.8373 28.2874 15.5737C28.2874 15.3099 28.1852 15.0627 27.9999 14.8772L27.41 14.2876C27.2246 14.1021 26.9774 14 26.7137 14C26.45 14 26.2027 14.1021 26.0174 14.2876L17.9997 22.305C17.814 22.491 17.712 22.7393 17.7126 23.0033C17.712 23.2683 17.814 23.5165 17.9997 23.7024Z"
+							fill="#BFBFBF"
+						/>
+					</g>
+					<defs>
+						<clipPath id="clip0_1_2748">
+							<rect
+								width="18"
+								height="18"
+								fill="white"
+								transform="translate(32 32) rotate(180)"
+							/>
+						</clipPath>
+					</defs>
+				  </svg>
+          <!-- arrow right -->
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="46" height="46" rx="23" fill="black" fill-opacity="0.5"/>
+            <path d="M28.0002 22.2976L19.99 14.2876C19.8048 14.1021 19.5574 14 19.2937 14C19.03 14 18.7827 14.1021 18.5974 14.2876L18.0075 14.8773C17.6237 15.2616 17.6237 15.8862 18.0075 16.2699L24.7339 22.9963L18.0001 29.7301C17.8148 29.9155 17.7125 30.1627 17.7125 30.4263C17.7125 30.6901 17.8148 30.9373 18.0001 31.1228L18.59 31.7124C18.7754 31.8979 19.0226 32 19.2863 32C19.55 32 19.7973 31.8979 19.9826 31.7124L28.0002 23.695C28.186 23.509 28.288 23.2607 28.2874 22.9967C28.288 22.7317 28.186 22.4835 28.0002 22.2976Z" fill="#BFBFBF"/>
+          </svg>
+            
+        </div>
+        <div class="navigation-bar__user">
+          <img src="/images/user-image.png" />
+          <p>Julita Gomez</p>
+          <div class="navigation-bar__user__on-hover-banner">Julita Gomez</div>
+        </div>
+				
+			</nav>
+			<section class="header">
+				<div class="header__img">
+					<img src="/images/image.png" alt="woman profile photo" />
+				</div>
+				<div class="header__text-container">
+					<span>Playlist</span>
+					<h1>The songs</br>of the world</h1>
+					<p>Popular songs of Dua Lipa and many others</p>
+				</div>
+			</section>
+			<div class="user-controls">
+				<!-- play button -->
+				<svg
+					width="55"
+					height="55"
+					viewBox="0 0 55 55"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<rect width="55" height="55" rx="27.5" fill="#65D36E" />
+					<g clip-path="url(#clip0_1_2763)">
+						<path
+							d="M23.9388 18.164C22.0899 17.1035 20.5909 17.9723 20.5909 20.1031V35.8276C20.5909 37.9605 22.0899 38.8282 23.9388 37.7686L37.6828 29.8866C39.5324 28.8256 39.5324 27.1067 37.6828 26.046L23.9388 18.164Z"
+							fill="black"
+						/>
+					</g>
+					<defs>
+						<clipPath id="clip0_1_2763">
+							<rect
+								width="20.5085"
+								height="20.5085"
+								fill="white"
+								transform="translate(19.5763 17.7119)"
+							/>
+						</clipPath>
+					</defs>
+				</svg>
+				<!-- heart like button -->
+				<svg class="user-controls__heart"
+					width="26"
+					height="27"
+					viewBox="0 0 26 27"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M18.9922 2.49078C16.8294 2.49078 14.9334 3.45517 13.5093 5.27974C13.3194 5.52308 13.1501 5.76653 13 6.00231C12.8499 5.76648 12.6806 5.52308 12.4907 5.27974C11.0666 3.45517 9.17059 2.49078 7.00781 2.49078C2.92216 2.49078 0 5.91176 0 10.0168C0 14.7106 3.84703 19.1344 12.4738 24.3604C12.6355 24.4584 12.8177 24.5074 13 24.5074C13.1823 24.5074 13.3645 24.4584 13.5262 24.3605C22.153 19.1344 26 14.7107 26 10.0168C26 5.91395 23.0802 2.49078 18.9922 2.49078ZM21.2853 15.8614C19.4893 17.8654 16.7753 19.9754 13 22.3017C9.22467 19.9754 6.51066 17.8654 4.71468 15.8615C2.909 13.8467 2.03125 11.9349 2.03125 10.0168C2.03125 7.06115 4.02868 4.52203 7.00781 4.52203C8.52495 4.52203 9.81855 5.18168 10.8527 6.4827C11.6796 7.52315 12.028 8.59753 12.0305 8.6052C12.1628 9.02948 12.5556 9.31847 13.0001 9.31847C13.4445 9.31847 13.8373 9.02953 13.9696 8.6052C13.9728 8.59494 14.3108 7.55408 15.1105 6.52952C16.1503 5.19742 17.4563 4.52198 18.9922 4.52198C21.9745 4.52198 23.9688 7.06353 23.9688 10.0168C23.9688 11.9348 23.091 13.8466 21.2853 15.8614Z"
+						fill="#BFBFBF"
+					/>
+				</svg>
+				<!-- more button -->
+				<svg
+					width="46"
+					height="47"
+					viewBox="0 0 46 47"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M22.9904 23.4947H23.0096"
+						stroke="#BFBFBF"
+						stroke-width="3.83333"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+					<path
+						d="M15.3237 23.4947H15.3429"
+						stroke="#BFBFBF"
+						stroke-width="3.83333"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+					<path
+						d="M30.6571 23.4947H30.6762"
+						stroke="#BFBFBF"
+						stroke-width="3.83333"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
+			</div>
+			<section class="playlist">
+        <!-- each card should be imported as a component (like in React) to avoid repeating code -->
+				<div class="playlist__card">
+          <!-- playlist song number -->
+					<span class="playlist__card-number"><span>01</span><svg class="playlist__card-number__play-icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.26117 0.440984C1.46015 -0.593306 0 0.253997 0 2.33197V17.6665C0 19.7466 1.46015 20.5928 3.26117 19.5595L16.6488 11.8728C18.4504 10.8382 18.4504 9.16189 16.6488 8.12748L3.26117 0.440984Z" fill="white"/>
+            </svg></span>
+          <!-- playlist album, song and image container -->
+					<div class="playlist__card__info-container">
+						<img src="/images/02.png" />
+						<div class="playlist__card__song-info">
+							<p class="playlist__card__song-info__album">Album</p>
+							<h3 class="playlist__card__song-info__title">Song Title</h3>
+						</div>
+					</div>
+          <!-- artist info -->
+          <div class="playlist__card__artist-info">
+            <p class="playlist__card__artist-info__artists">Artists</p>
+						<h3 class="playlist__card__artist-info__name">Artist name</h3>
+          </div>
+          <!-- song duration -->
+          <div class="playlist__card__song-duration">
+            <p class="playlist__card__song-duration__time">Time</p>
+            <h3 class="playlist__card__song-duration__minutes">3:20</h3>
+          </div>
+          <!-- buttons on the right side of card -->
+					<div class="playlist__card__buttons">
+            <svg class="playlist__card__buttons__heart" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5312 0.337646C15.5348 0.337646 13.7847 1.22785 12.4701 2.91207C12.2948 3.13669 12.1385 3.36141 12 3.57905C11.8615 3.36137 11.7052 3.13669 11.5299 2.91207C10.2153 1.22785 8.46516 0.337646 6.46875 0.337646C2.69737 0.337646 0 3.49548 0 7.28471C0 11.6175 3.55111 15.701 11.5142 20.525C11.6635 20.6154 11.8318 20.6607 12 20.6607C12.1682 20.6607 12.3365 20.6155 12.4858 20.5251C20.4489 15.701 24 11.6176 24 7.28476C24 3.49749 21.3048 0.337646 17.5312 0.337646ZM19.648 12.6798C17.9902 14.5296 15.4849 16.4773 12 18.6246C8.51508 16.4773 6.00984 14.5296 4.35202 12.6798C2.68523 10.82 1.875 9.05527 1.875 7.28476C1.875 4.55644 3.71878 2.21265 6.46875 2.21265C7.86919 2.21265 9.06328 2.82155 10.0179 4.02249C10.7812 4.98291 11.1028 5.97465 11.1051 5.98173C11.2272 6.37337 11.5898 6.64013 12 6.64013C12.4103 6.64013 12.7729 6.37341 12.895 5.98173C12.898 5.97226 13.2099 5.01146 13.9482 4.06571C14.9079 2.83608 16.1135 2.2126 17.5312 2.2126C20.2841 2.2126 22.125 4.55865 22.125 7.28471C22.125 9.05523 21.3148 10.82 19.648 12.6798Z" fill="#BFBFBF"/>
+              </svg>
+              
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.9925 17.9959H18.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.9925 17.9959H12.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.9925 17.9959H24.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+				</div>
+				<div class="playlist__card">
+          <span class="playlist__card-number"><span>02</span><svg class="playlist__card-number__play-icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.26117 0.440984C1.46015 -0.593306 0 0.253997 0 2.33197V17.6665C0 19.7466 1.46015 20.5928 3.26117 19.5595L16.6488 11.8728C18.4504 10.8382 18.4504 9.16189 16.6488 8.12748L3.26117 0.440984Z" fill="white"/>
+            </svg></span>
+					<div class="playlist__card__info-container">
+						<img src="/images/01.png" />
+						<div class="playlist__card__song-info">
+							<p class="playlist__card__song-info__album">Album</p>
+							<h3 class="playlist__card__song-info__title">Song Title</h3>
+						</div>
+            
+					</div>
+          <div class="playlist__card__artist-info">
+            <p class="playlist__card__artist-info__artists">Artists</p>
+						<h3 class="playlist__card__artist-info__name">Artist name</h3>
+          </div>
+          <div class="playlist__card__song-duration">
+            <p class="playlist__card__song-duration__time">Time</p>
+            <h3 class="playlist__card__song-duration__minutes">2:32</h3>
+          </div>
+          <div class="playlist__card__buttons">
+            <svg class="playlist__card__buttons__heart" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5312 0.337646C15.5348 0.337646 13.7847 1.22785 12.4701 2.91207C12.2948 3.13669 12.1385 3.36141 12 3.57905C11.8615 3.36137 11.7052 3.13669 11.5299 2.91207C10.2153 1.22785 8.46516 0.337646 6.46875 0.337646C2.69737 0.337646 0 3.49548 0 7.28471C0 11.6175 3.55111 15.701 11.5142 20.525C11.6635 20.6154 11.8318 20.6607 12 20.6607C12.1682 20.6607 12.3365 20.6155 12.4858 20.5251C20.4489 15.701 24 11.6176 24 7.28476C24 3.49749 21.3048 0.337646 17.5312 0.337646ZM19.648 12.6798C17.9902 14.5296 15.4849 16.4773 12 18.6246C8.51508 16.4773 6.00984 14.5296 4.35202 12.6798C2.68523 10.82 1.875 9.05527 1.875 7.28476C1.875 4.55644 3.71878 2.21265 6.46875 2.21265C7.86919 2.21265 9.06328 2.82155 10.0179 4.02249C10.7812 4.98291 11.1028 5.97465 11.1051 5.98173C11.2272 6.37337 11.5898 6.64013 12 6.64013C12.4103 6.64013 12.7729 6.37341 12.895 5.98173C12.898 5.97226 13.2099 5.01146 13.9482 4.06571C14.9079 2.83608 16.1135 2.2126 17.5312 2.2126C20.2841 2.2126 22.125 4.55865 22.125 7.28471C22.125 9.05523 21.3148 10.82 19.648 12.6798Z" fill="#BFBFBF"/>
+              </svg>
+              
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.9925 17.9959H18.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.9925 17.9959H12.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.9925 17.9959H24.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          
+        </div>
+				<div class="playlist__card">
+          <span class="playlist__card-number"><span>03</span><svg class="playlist__card-number__play-icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.26117 0.440984C1.46015 -0.593306 0 0.253997 0 2.33197V17.6665C0 19.7466 1.46015 20.5928 3.26117 19.5595L16.6488 11.8728C18.4504 10.8382 18.4504 9.16189 16.6488 8.12748L3.26117 0.440984Z" fill="white"/>
+            </svg>
+            </span>
+					<div class="playlist__card__info-container">
+						<img src="/images/03.png" />
+						<div class="playlist__card__song-info">
+							<p class="playlist__card__song-info__album">Album</p>
+							<h3 class="playlist__card__song-info__title">Song Title</h3>
+						</div>
+					</div>
+          <div class="playlist__card__artist-info">
+            <p class="playlist__card__artist-info__artists">Artists</p>
+						<h3 class="playlist__card__artist-info__name">Artist name</h3>
+          </div>
+          <div class="playlist__card__song-duration">
+            <p class="playlist__card__song-duration__time">Time</p>
+            <h3 class="playlist__card__song-duration__minutes">3:52</h3>
+          </div>
+					<div class="playlist__card__buttons">
+            <svg class="playlist__card__buttons__heart" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5312 0.337646C15.5348 0.337646 13.7847 1.22785 12.4701 2.91207C12.2948 3.13669 12.1385 3.36141 12 3.57905C11.8615 3.36137 11.7052 3.13669 11.5299 2.91207C10.2153 1.22785 8.46516 0.337646 6.46875 0.337646C2.69737 0.337646 0 3.49548 0 7.28471C0 11.6175 3.55111 15.701 11.5142 20.525C11.6635 20.6154 11.8318 20.6607 12 20.6607C12.1682 20.6607 12.3365 20.6155 12.4858 20.5251C20.4489 15.701 24 11.6176 24 7.28476C24 3.49749 21.3048 0.337646 17.5312 0.337646ZM19.648 12.6798C17.9902 14.5296 15.4849 16.4773 12 18.6246C8.51508 16.4773 6.00984 14.5296 4.35202 12.6798C2.68523 10.82 1.875 9.05527 1.875 7.28476C1.875 4.55644 3.71878 2.21265 6.46875 2.21265C7.86919 2.21265 9.06328 2.82155 10.0179 4.02249C10.7812 4.98291 11.1028 5.97465 11.1051 5.98173C11.2272 6.37337 11.5898 6.64013 12 6.64013C12.4103 6.64013 12.7729 6.37341 12.895 5.98173C12.898 5.97226 13.2099 5.01146 13.9482 4.06571C14.9079 2.83608 16.1135 2.2126 17.5312 2.2126C20.2841 2.2126 22.125 4.55865 22.125 7.28471C22.125 9.05523 21.3148 10.82 19.648 12.6798Z" fill="#BFBFBF"/>
+              </svg>
+              
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.9925 17.9959H18.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.9925 17.9959H12.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.9925 17.9959H24.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+				<div class="playlist__card">
+          <span class="playlist__card-number"><span>04</span><svg class="playlist__card-number__play-icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.26117 0.440984C1.46015 -0.593306 0 0.253997 0 2.33197V17.6665C0 19.7466 1.46015 20.5928 3.26117 19.5595L16.6488 11.8728C18.4504 10.8382 18.4504 9.16189 16.6488 8.12748L3.26117 0.440984Z" fill="white"/>
+            </svg>
+            </span>
+					<div class="playlist__card__info-container">
+            <!-- cover image -->
+						<img src="/images/04.png" />
+						<div class="playlist__card__song-info">
+							<p class="playlist__card__song-info__album">Album</p>
+							<h3 class="playlist__card__song-info__title">Song Title</h3>
+						</div>
+					</div>
+          <div class="playlist__card__artist-info">
+            <p class="playlist__card__artist-info__artists">Artists</p>
+						<h3 class="playlist__card__artist-info__name">Artist name</h3>
+          </div>
+          <div class="playlist__card__song-duration">
+            <p class="playlist__card__song-duration__time">Time</p>
+            <h3 class="playlist__card__song-duration__minutes">2:28</h3>
+          </div>
+					<div class="playlist__card__buttons">
+            <svg class="playlist__card__buttons__heart" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5312 0.337646C15.5348 0.337646 13.7847 1.22785 12.4701 2.91207C12.2948 3.13669 12.1385 3.36141 12 3.57905C11.8615 3.36137 11.7052 3.13669 11.5299 2.91207C10.2153 1.22785 8.46516 0.337646 6.46875 0.337646C2.69737 0.337646 0 3.49548 0 7.28471C0 11.6175 3.55111 15.701 11.5142 20.525C11.6635 20.6154 11.8318 20.6607 12 20.6607C12.1682 20.6607 12.3365 20.6155 12.4858 20.5251C20.4489 15.701 24 11.6176 24 7.28476C24 3.49749 21.3048 0.337646 17.5312 0.337646ZM19.648 12.6798C17.9902 14.5296 15.4849 16.4773 12 18.6246C8.51508 16.4773 6.00984 14.5296 4.35202 12.6798C2.68523 10.82 1.875 9.05527 1.875 7.28476C1.875 4.55644 3.71878 2.21265 6.46875 2.21265C7.86919 2.21265 9.06328 2.82155 10.0179 4.02249C10.7812 4.98291 11.1028 5.97465 11.1051 5.98173C11.2272 6.37337 11.5898 6.64013 12 6.64013C12.4103 6.64013 12.7729 6.37341 12.895 5.98173C12.898 5.97226 13.2099 5.01146 13.9482 4.06571C14.9079 2.83608 16.1135 2.2126 17.5312 2.2126C20.2841 2.2126 22.125 4.55865 22.125 7.28471C22.125 9.05523 21.3148 10.82 19.648 12.6798Z" fill="#BFBFBF"/>
+              </svg>
+              
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.9925 17.9959H18.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.9925 17.9959H12.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.9925 17.9959H24.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+				<div class="playlist__card">
+          <span class="playlist__card-number"><span>05</span><svg class="playlist__card-number__play-icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.26117 0.440984C1.46015 -0.593306 0 0.253997 0 2.33197V17.6665C0 19.7466 1.46015 20.5928 3.26117 19.5595L16.6488 11.8728C18.4504 10.8382 18.4504 9.16189 16.6488 8.12748L3.26117 0.440984Z" fill="white"/>
+            </svg>
+            </span>
+					<div class="playlist__card__info-container">
+            <!-- cover image -->
+						<img src="/images/05.png" />
+						<div class="playlist__card__song-info">
+							<p class="playlist__card__song-info__album">Album</p>
+							<h3 class="playlist__card__song-info__title">Song Title</h3>
+						</div>
+					</div>
+          <div class="playlist__card__artist-info">
+            <p class="playlist__card__artist-info__artists">Artists</p>
+						<h3 class="playlist__card__artist-info__name">Artist name</h3>
+          </div>
+          <div class="playlist__card__song-duration">
+            <p class="playlist__card__song-duration__time">Time</p>
+            <h3 class="playlist__card__song-duration__minutes">2:58</h3>
+          </div>
+					<div class="playlist__card__buttons">
+            <svg class="playlist__card__buttons__heart" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5312 0.337646C15.5348 0.337646 13.7847 1.22785 12.4701 2.91207C12.2948 3.13669 12.1385 3.36141 12 3.57905C11.8615 3.36137 11.7052 3.13669 11.5299 2.91207C10.2153 1.22785 8.46516 0.337646 6.46875 0.337646C2.69737 0.337646 0 3.49548 0 7.28471C0 11.6175 3.55111 15.701 11.5142 20.525C11.6635 20.6154 11.8318 20.6607 12 20.6607C12.1682 20.6607 12.3365 20.6155 12.4858 20.5251C20.4489 15.701 24 11.6176 24 7.28476C24 3.49749 21.3048 0.337646 17.5312 0.337646ZM19.648 12.6798C17.9902 14.5296 15.4849 16.4773 12 18.6246C8.51508 16.4773 6.00984 14.5296 4.35202 12.6798C2.68523 10.82 1.875 9.05527 1.875 7.28476C1.875 4.55644 3.71878 2.21265 6.46875 2.21265C7.86919 2.21265 9.06328 2.82155 10.0179 4.02249C10.7812 4.98291 11.1028 5.97465 11.1051 5.98173C11.2272 6.37337 11.5898 6.64013 12 6.64013C12.4103 6.64013 12.7729 6.37341 12.895 5.98173C12.898 5.97226 13.2099 5.01146 13.9482 4.06571C14.9079 2.83608 16.1135 2.2126 17.5312 2.2126C20.2841 2.2126 22.125 4.55865 22.125 7.28471C22.125 9.05523 21.3148 10.82 19.648 12.6798Z" fill="#BFBFBF"/>
+              </svg>
+              
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.9925 17.9959H18.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.9925 17.9959H12.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.9925 17.9959H24.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+				<div class="playlist__card">
+          <span class="playlist__card-number"><span>06</span><svg class="playlist__card-number__play-icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.26117 0.440984C1.46015 -0.593306 0 0.253997 0 2.33197V17.6665C0 19.7466 1.46015 20.5928 3.26117 19.5595L16.6488 11.8728C18.4504 10.8382 18.4504 9.16189 16.6488 8.12748L3.26117 0.440984Z" fill="white"/>
+            </svg>
+            </span>
+					<div class="playlist__card__info-container">
+            <!-- cover image -->
+						<img src="/images/06.png" />
+						<div class="playlist__card__song-info">
+							<p class="playlist__card__song-info__album">Album</p>
+							<h3 class="playlist__card__song-info__title">Song Title</h3>
+						</div>
+					</div>
+          <div class="playlist__card__artist-info">
+            <p class="playlist__card__artist-info__artists">Artists</p>
+						<h3 class="playlist__card__artist-info__name">Artist name</h3>
+          </div>
+          <div class="playlist__card__song-duration">
+            <p class="playlist__card__song-duration__time">Time</p>
+            <h3 class="playlist__card__song-duration__minutes">3:32</h3>
+          </div>
+					<div class="playlist__card__buttons">
+            <svg class="playlist__card__buttons__heart" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5312 0.337646C15.5348 0.337646 13.7847 1.22785 12.4701 2.91207C12.2948 3.13669 12.1385 3.36141 12 3.57905C11.8615 3.36137 11.7052 3.13669 11.5299 2.91207C10.2153 1.22785 8.46516 0.337646 6.46875 0.337646C2.69737 0.337646 0 3.49548 0 7.28471C0 11.6175 3.55111 15.701 11.5142 20.525C11.6635 20.6154 11.8318 20.6607 12 20.6607C12.1682 20.6607 12.3365 20.6155 12.4858 20.5251C20.4489 15.701 24 11.6176 24 7.28476C24 3.49749 21.3048 0.337646 17.5312 0.337646ZM19.648 12.6798C17.9902 14.5296 15.4849 16.4773 12 18.6246C8.51508 16.4773 6.00984 14.5296 4.35202 12.6798C2.68523 10.82 1.875 9.05527 1.875 7.28476C1.875 4.55644 3.71878 2.21265 6.46875 2.21265C7.86919 2.21265 9.06328 2.82155 10.0179 4.02249C10.7812 4.98291 11.1028 5.97465 11.1051 5.98173C11.2272 6.37337 11.5898 6.64013 12 6.64013C12.4103 6.64013 12.7729 6.37341 12.895 5.98173C12.898 5.97226 13.2099 5.01146 13.9482 4.06571C14.9079 2.83608 16.1135 2.2126 17.5312 2.2126C20.2841 2.2126 22.125 4.55865 22.125 7.28471C22.125 9.05523 21.3148 10.82 19.648 12.6798Z" fill="#BFBFBF"/>
+              </svg>
+              
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.9925 17.9959H18.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.9925 17.9959H12.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.9925 17.9959H24.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+				<div class="playlist__card">
+          <span class="playlist__card-number"><span>07</span><svg class="playlist__card-number__play-icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.26117 0.440984C1.46015 -0.593306 0 0.253997 0 2.33197V17.6665C0 19.7466 1.46015 20.5928 3.26117 19.5595L16.6488 11.8728C18.4504 10.8382 18.4504 9.16189 16.6488 8.12748L3.26117 0.440984Z" fill="white"/>
+            </svg>
+            </span>
+					<div class="playlist__card__info-container">
+            <!-- cover image -->
+						<img src="/images/07.png" />
+						<div class="playlist__card__song-info">
+							<p class="playlist__card__song-info__album">Album</p>
+							<h3 class="playlist__card__song-info__title">Song Title</h3>
+						</div>
+					</div>
+          <div class="playlist__card__artist-info">
+            <p class="playlist__card__artist-info__artists">Artists</p>
+						<h3 class="playlist__card__artist-info__name">Artist name</h3>
+          </div>
+          <div class="playlist__card__song-duration">
+            <p class="playlist__card__song-duration__time">Time</p>
+            <h3 class="playlist__card__song-duration__minutes">2:54</h3>
+          </div>
+					<div class="playlist__card__buttons">
+            <svg class="playlist__card__buttons__heart" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5312 0.337646C15.5348 0.337646 13.7847 1.22785 12.4701 2.91207C12.2948 3.13669 12.1385 3.36141 12 3.57905C11.8615 3.36137 11.7052 3.13669 11.5299 2.91207C10.2153 1.22785 8.46516 0.337646 6.46875 0.337646C2.69737 0.337646 0 3.49548 0 7.28471C0 11.6175 3.55111 15.701 11.5142 20.525C11.6635 20.6154 11.8318 20.6607 12 20.6607C12.1682 20.6607 12.3365 20.6155 12.4858 20.5251C20.4489 15.701 24 11.6176 24 7.28476C24 3.49749 21.3048 0.337646 17.5312 0.337646ZM19.648 12.6798C17.9902 14.5296 15.4849 16.4773 12 18.6246C8.51508 16.4773 6.00984 14.5296 4.35202 12.6798C2.68523 10.82 1.875 9.05527 1.875 7.28476C1.875 4.55644 3.71878 2.21265 6.46875 2.21265C7.86919 2.21265 9.06328 2.82155 10.0179 4.02249C10.7812 4.98291 11.1028 5.97465 11.1051 5.98173C11.2272 6.37337 11.5898 6.64013 12 6.64013C12.4103 6.64013 12.7729 6.37341 12.895 5.98173C12.898 5.97226 13.2099 5.01146 13.9482 4.06571C14.9079 2.83608 16.1135 2.2126 17.5312 2.2126C20.2841 2.2126 22.125 4.55865 22.125 7.28471C22.125 9.05523 21.3148 10.82 19.648 12.6798Z" fill="#BFBFBF"/>
+              </svg>
+              
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.9925 17.9959H18.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.9925 17.9959H12.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.9925 17.9959H24.0078"
+                stroke="#BFBFBF"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+			</section>
+      <!-- bottom menu section -->
+      <section class="bottom-menu">
+        <div class="bottom-menu__button home-btn">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.2569 8.16815L10.9461 2.20892C10.6808 2.02356 10.3227 2.02149 10.0544 2.20892L1.74357 8.16815C0.904843 8.76952 -0.00620633 7.50164 0.833766 6.89934L9.14781 0.937838C9.14964 0.936511 9.15148 0.935223 9.15335 0.933896C9.95582 0.368945 11.0354 0.362309 11.8472 0.933896C11.8491 0.935184 11.8509 0.936511 11.8528 0.937838L20.1667 6.89934C21.0084 7.50285 20.0884 8.76437 19.2569 8.16815Z" fill="#BFBFBF"/>
+            <path d="M16.5913 20.4923H12.0635C11.6324 20.4923 11.2829 20.1428 11.2829 19.7116V16.5891C11.2829 16.1586 10.9327 15.8084 10.5022 15.8084C10.0718 15.8084 9.72159 16.1586 9.72159 16.5891V19.7116C9.72159 20.1428 9.3721 20.4923 8.94095 20.4923H4.41322C3.12188 20.4923 2.07129 19.4417 2.07129 18.1503V11.1483C2.07129 10.3888 2.44124 9.6744 3.06111 9.23607L9.14774 4.8423C9.15024 4.84046 9.15278 4.83867 9.15535 4.83687C9.95781 4.27207 11.0372 4.2654 11.8491 4.83687C11.8517 4.83867 11.8542 4.84046 11.8567 4.8423L17.9434 9.23611C18.5633 9.67444 18.9332 10.3889 18.9332 11.1483V18.1504C18.9332 19.4417 17.8826 20.4923 16.5913 20.4923ZM12.8442 18.931H16.5913C17.0217 18.931 17.3719 18.5808 17.3719 18.1503V11.1483C17.3719 10.8945 17.248 10.6559 17.0405 10.5099C17.038 10.5081 17.0355 10.5063 17.0329 10.5045L10.9474 6.11146C10.6819 5.92653 10.3246 5.92509 10.0571 6.11146L3.97153 10.5045C3.96903 10.5063 3.9665 10.5081 3.96392 10.5099C3.75646 10.6559 3.63258 10.8945 3.63258 11.1483V18.1503C3.63258 18.5808 3.98277 18.931 4.41322 18.931H8.16031V16.5891C8.16031 15.2977 9.21089 14.2471 10.5022 14.2471C11.7936 14.2471 12.8442 15.2977 12.8442 16.5891V18.931Z" fill="#BFBFBF"/>
+            </svg>
+            <p>Home</p>
+        </div>
+        <div class="bottom-menu__button search-btn">
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.0001 20.4902C1.12359 20.4813 -3.34124 9.7014 2.92906 3.41918C6.65128 -0.459754 13.3489 -0.460379 17.0711 3.41934C23.3414 9.7021 18.876 20.4818 10.0001 20.4902ZM10.0001 2.05278C5.34761 2.05278 1.56257 5.83781 1.56257 10.4903C2.02605 21.6837 17.9757 21.6805 18.4375 10.4902C18.4375 5.83785 14.6525 2.05278 10.0001 2.05278ZM10.0001 11.2715C10.4315 11.2715 10.7813 10.9217 10.7813 10.4903C10.7402 9.45394 9.25979 9.45425 9.21881 10.4903C9.21881 10.9217 9.56857 11.2715 10.0001 11.2715ZM5.58608 15.6856C5.38202 15.6856 5.18237 15.6056 5.03354 15.4568C4.8264 15.2496 4.75257 14.944 4.84226 14.6651L6.99069 7.98546C7.06776 7.74582 7.25557 7.558 7.49522 7.48093L14.1749 5.3325C14.4537 5.24281 14.7593 5.31668 14.9665 5.52379C15.1737 5.73094 15.2475 6.03652 15.1578 6.31543L13.0094 12.9951C13.0038 13.0123 12.9977 13.0293 12.991 13.046C12.8546 13.3871 12.5678 13.4794 12.43 13.5237L5.82518 15.6481C5.74667 15.6733 5.66604 15.6856 5.58608 15.6856ZM8.35537 8.84558L6.79577 13.6946C8.35291 13.1938 10.7275 12.4301 11.6447 12.135L13.2043 7.28597L8.35537 8.84558Z" fill="#BFBFBF"/>
+            </svg>
+            
+            <p>Search</p>
+        </div>
+        <div class="bottom-menu__button library-btn">
+          <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4356 6.14598C18.4356 4.69027 17.2559 3.51056 15.8002 3.51056C12.6655 3.51056 6.47661 3.51056 3.3419 3.51056C1.88619 3.51056 0.706482 4.69027 0.706482 6.14598V15.7293C0.706482 17.185 1.88619 18.3647 3.3419 18.3647H15.8002C17.2559 18.3647 18.4356 17.185 18.4356 15.7293V6.14598ZM16.9981 6.14598V15.7293C16.9981 16.3906 16.4615 16.9272 15.8002 16.9272C12.6655 16.9272 6.47661 16.9272 3.3419 16.9272C2.68065 16.9272 2.14398 16.3906 2.14398 15.7293V6.14598C2.14398 5.48473 2.68065 4.94806 3.3419 4.94806H15.8002C16.4615 4.94806 16.9981 5.48473 16.9981 6.14598Z" fill="#BFBFBF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.26286 4.9471L4.30023 4.94806L4.3309 4.94423C4.4689 4.9241 5.01898 4.80718 5.01898 4.21685V3.27098C5.01898 2.95281 5.14548 2.64902 5.36973 2.42381C5.59494 2.19956 5.89873 2.07306 6.2169 2.07306H18.6752C19.3365 2.07306 19.8731 2.60973 19.8731 3.27098V12.8543C19.8731 13.1725 19.7467 13.4763 19.5224 13.7015C19.2972 13.9257 18.9934 14.0522 18.6752 14.0522H17.7169C17.3201 14.0522 16.9981 14.3742 16.9981 14.771C16.9981 15.1677 17.3201 15.4897 17.7169 15.4897H18.6752C19.3739 15.4897 20.0447 15.2118 20.5392 14.7183C21.0327 14.2238 21.3106 13.5529 21.3106 12.8543V3.27098C21.3106 1.81527 20.1309 0.635559 18.6752 0.635559C15.5405 0.635559 9.35161 0.635559 6.2169 0.635559C5.51827 0.635559 4.84744 0.913476 4.35294 1.40702C3.8594 1.90152 3.58148 2.57235 3.58148 3.27098V4.21685V4.22931C3.58148 4.6136 3.88336 4.92793 4.26286 4.9471Z" fill="#BFBFBF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.13786 10.6981C6.68311 10.6981 5.50244 11.8787 5.50244 13.3335C5.50244 14.7882 6.68311 15.9689 8.13786 15.9689C9.59261 15.9689 10.7733 14.7882 10.7733 13.3335C10.7733 11.8787 9.59261 10.6981 8.13786 10.6981ZM8.13786 12.1356C8.79911 12.1356 9.33577 12.6722 9.33577 13.3335C9.33577 13.9947 8.79911 14.5314 8.13786 14.5314C7.47661 14.5314 6.93994 13.9947 6.93994 13.3335C6.93994 12.6722 7.47661 12.1356 8.13786 12.1356Z" fill="#BFBFBF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.769 13.3335V7.96777L12.5266 9.13981C12.8562 9.36022 13.3028 9.27014 13.5232 8.94047C13.7436 8.61081 13.6536 8.16422 13.3239 7.94381L10.4489 6.02714C10.2285 5.88052 9.94482 5.86614 9.71098 5.99168C9.47715 6.11627 9.33148 6.35968 9.33148 6.62514V13.3335C9.33148 13.7302 9.65348 14.0522 10.0502 14.0522C10.447 14.0522 10.769 13.7302 10.769 13.3335Z" fill="#BFBFBF"/>
+            </svg>
+            
+            <p>Library</p>
+        </div>
+        <div class="bottom-menu__button liked-songs-btn">
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1_3713)">
+            <path d="M14.6094 2.03204C12.9457 2.03204 11.4873 2.77388 10.3918 4.17739C10.2457 4.36458 10.1154 4.55185 10 4.73322C9.88457 4.55181 9.75434 4.36458 9.60824 4.17739C8.51273 2.77388 7.0543 2.03204 5.39062 2.03204C2.24781 2.03204 0 4.66357 0 7.82126C0 11.4319 2.95926 14.8348 9.59519 18.8549C9.71961 18.9302 9.85981 18.9679 10 18.9679C10.1402 18.9679 10.2804 18.9302 10.4048 18.8549C17.0407 14.8349 20 11.432 20 7.8213C20 4.66525 17.754 2.03204 14.6094 2.03204ZM16.3733 12.3172C14.9918 13.8586 12.9041 15.4818 10 17.2712C7.0959 15.4818 5.0082 13.8586 3.62668 12.3172C2.2377 10.7674 1.5625 9.29673 1.5625 7.8213C1.5625 5.54771 3.09898 3.59454 5.39062 3.59454C6.55766 3.59454 7.55273 4.10197 8.34824 5.10275C8.98434 5.9031 9.25234 6.72954 9.25422 6.73544C9.35598 7.06181 9.65816 7.28411 10 7.28411C10.3419 7.28411 10.6441 7.06185 10.7459 6.73544C10.7483 6.72755 11.0083 5.92689 11.6235 5.13876C12.4233 4.11407 13.4279 3.5945 14.6094 3.5945C16.9034 3.5945 18.4375 5.54954 18.4375 7.82126C18.4375 9.29669 17.7623 10.7673 16.3733 12.3172Z" fill="#BFBFBF"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1_3713">
+            <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+            </clipPath>
+            </defs>
+            </svg>
+            
+            <p>Liked songs</p>
+        </div>
+        
+          
+      </section>
+		</div>
+
+		<script type="module" src="/src/global-scripts/main.js"></script>
+		<script
+			type="module"
+			src="/src/pages/home-page/scripts/home-page.js"
+		></script>
+	</body>
+</html>
